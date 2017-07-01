@@ -1,0 +1,55 @@
+Author: Zongjian Li, Weijia Chen
+
+Requirements: python2.
+DQN agent requires tensorflow to run.  
+ 
+--------------
+DQN.py
+
+Neural network for deep Q-learning. Borrowed from https://github.com/tychovdo/PacmanDQN/DQN.
+
+--------------
+DQNandBaselineTeam.py
+
+DQN offensive agent and baseline defensive agent. For reasons beyond our knowledge, our DQN model currently works only for the red team (as it was trained on it). Please make this team red while testing.
+
+--------------
+saves/
+
+Directory for model files. Required by DQN agent.
+
+--------------
+MySearchTeam.py
+
+All code in MySearchTeam.py was written by our team.
+
+Before using MySearchTeam, please read the "Pacman Capture the Flag" project description first.
+
+There are several agents available in MySearchTeam.
+You can find a picture of our agent family in our report. (Sorry, text file can not attach pictures.)
+You can use team option "first" and "second" to specify which agent classes (with white background boxes in the picture) to use to make up your team.
+
+The default agents are StateEvaluateOffensiveAgent and StateEvaluateDefensiveAgent.
+Be aware that if you use ActionEvaluationAgent or ActionEvaluationOffensiveAgent, you have to set "evalTotalReward" option to "True".
+The default time limit is 1 second, you can use option "actionTimeLimit" to change it. (Maybe you need another option "truncateRemainTimePercent".)
+If you do not want agents printing logs, you can set option "enablePrintLog" to "False".
+There are also many other team options. You can find detailed desctiption in MySearchTeam.py. (We wrote clear comments in our source code, please read it.)
+
+Our agents obey the default rules, please do not force them to contest with those agents which do not follow these rules.
+
+Features and weights are adjusted by hands (although we have an approximate q-learning agent in MySearchTeam.py), agents may seem stupid in some cases. (Search depth too low, no enough time)
+We think the thoughts behind those code are more important than features and weights.
+
+If you want to use parallel version agents, please change the super class of agent classes from ExpectimaxAgent to ExpectimaxParallelAgent in MySearchTeam.py.
+Because of a bug of Python mulitprocess library, KeyboardInterrupt is invalid.
+
+
+--------------
+Please check https://github.com/BrightFeather/PacmanContest for information should further updates are made in the future.
+
+
+
+
+
+
+
